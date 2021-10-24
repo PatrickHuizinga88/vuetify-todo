@@ -2,9 +2,12 @@
   <div class="home">
     <v-text-field
       v-model="newTaskTitle"
+      @click:append="addTask(newTaskTitle)"
+      @keyup.enter="addTask(newTaskTitle)"
       class="px-6 py-4"
+      outlined
       label="Add task"
-      prepend-icon="mdi-checkbox-marked-circle-outline"
+      append-icon="mdi-plus"
       hide-details
       clearable
     ></v-text-field>
@@ -50,34 +53,39 @@
       return {
         newTaskTitle: '',
         tasks: [
-          {
-            id: 1,
-            title: 'Groceries',
-            done: false
-          },
-          {
-            id: 2,
-            title: 'John Doe\'s Birthday',
-            done: false
-          },
-          {
-            id: 3,
-            title: 'Dentist',
-            done: false
-          }
+          // {
+          //   id: 1,
+          //   title: 'Groceries',
+          //   done: false
+          // },
+          // {
+          //   id: 2,
+          //   title: 'John Doe\'s Birthday',
+          //   done: false
+          // },
+          // {
+          //   id: 3,
+          //   title: 'Dentist',
+          //   done: false
+          // }
         ]
       }
     },
     methods: {
+      addTask(title) {
+        this.tasks.push({
+          id: this.tasks.length !== 0 ? this.tasks[this.tasks.length - 1].id + 1 : 1, 
+          title: title, 
+          done: false
+        })
+        this.newTaskTitle = ''
+      },
       doneTask(id) {
         let task = this.tasks.filter(task => task.id === id)[0]
         task.done = !task.done
       },
       deleteTask(id) {
         this.tasks = this.tasks.filter(task => task.id !== id)
-      },
-      addTask() {
-
       }
     }
   }

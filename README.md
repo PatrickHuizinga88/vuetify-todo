@@ -1,19 +1,9 @@
-# vuetify-todo
+# Vuetify Todo
 
-## Project setup
-```
-npm install
-```
+**Demo: https://patrickhuizinga88.github.io/vuetify-todo-demo/**
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+My second public project in Vue and first with Vuetify.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+With this todo app you can simply check, add and delete your tasks.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+I have made this app with the help of a Vuetify tutorial on YouTube.

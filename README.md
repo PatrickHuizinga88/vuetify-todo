@@ -1,6 +1,6 @@
 # Vuetify Todo
 
-**Demo: https://patrickhuizinga88.github.io/vuetify-todo-demo/**
+**Demo: https://patrickhuizinga88.github.io/vuetify-todo/**
 
 My second public project in Vue and first with Vuetify.
 
